@@ -1,0 +1,103 @@
+div {
+    border: black 5px solid;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  /*Más concreto*/
+  div p:first-child {
+    color: red;
+  }
+  
+
+  div :first-child{
+      color: blue;
+  }
+
+  a:link {
+    background-color: lightblue;
+  }
+  
+  a:visited {
+    background-color: orange;
+  }
+  /*Sólo funciona una vez. Debes borrar los datos de navegación (historial).*/
+
+
+
+  /*HOVER (SIN MANTENER)*/
+  p.latin{
+      color: black;
+      background-color: white;
+  }
+
+  p.latin:hover{/*Cuando estas encima cambia a estos colores*/
+      color: white;
+      background-color: black;
+  }
+
+
+  /*ACTIVE (MANTENIENDO)*/
+  p.latin2{
+      color: white;
+      background-color: lightslategrey;
+
+  }
+
+  p.latin2:active{/*Cuando haces click y mantienes cambia a estos colores*/
+      color: royalblue;
+      background-color: yellow;
+  }
+
+  input:focus {
+    border: red 2px dotted;
+    padding: 2px;
+  }
+
+  q:lang(es) {
+    quotes: "«" "»";
+  }
+  
+  q:lang(en) {
+    quotes: '"' '"';
+  }
+
+  /*PRIMERA LÍNEA*/
+  
+  p.latin3::first-line {
+    text-transform: uppercase;
+  }
+  
+
+  /*PRIMERA LETRA*/
+  
+  p.latin4::first-letter {
+    background-color: pink;
+    color: red;
+    float: left;
+    font-family: monospace;
+    font-size: 400%;
+  }
+  
+
+  p.daw::before{
+      content: "Aprobado";
+      font-weight: bold;
+      text-decoration: underline;
+  }
+
+  p.daw::after{
+      content: "Si sacas más de un 5";
+      color: royalblue;
+  }
+
+  pre {
+    counter-reset: cuenta;
+  }
+  
+  section p::before {
+    content: counter(cuenta);
+    counter-increment: cuenta;
+  }
+
+  
